@@ -98,7 +98,10 @@ def createRooms():
 
     # Lab features
     laboratory.addFeature('beaker', 'A green bubbling liquid is heating over a Bunsen burner. To your surprise, it actually boils faster when you remove it from the heat.')
-    laboratory.addFeature('table', 'A cold metal slab table takes center stage in the room. There are four steel shackles along the edges, and an enormous lever next to the Tesla coil at it\'s head. The shackles are broken.')
+    laboratory.addFeature('table', 'A cold metal slab table takes center stage in the room. There are four steel shackles along the edges, and an enormous lever next to the Tesla coil at it\'s head. A pile of spooky remains leison top.')
+
+    # Lab items
+    laboratory.addItem('remains')
 
     # Landing exits
     landing.addExit('northern_door', armory)
@@ -144,11 +147,13 @@ def createRooms():
 createRooms()
 # Add the player inventory
 inventory = []
+# Implement player score
+score = 0
 # Implement game responses to player
 # Run until the game is won or player quits
 victory = False
 while victory == False:
-    player = 'You are in {}\nIn your bag, you have {}\n'.format(location, inventory)
+    player = 'You are in {}\nIn your bag, you have {}\nYour score is {}'.format(location, inventory, score)
 
     if location == None:
         victory = True
@@ -220,6 +225,12 @@ while victory == False:
                     # Let player know the item is retrieved.
                     response = 'You picked up {}'.format(items)
                     break
+        
+        elif verb == 'use':
+            response = 'You can\'t use that here'
+            if noun = 'remains':
+                if location = 
+            
     # Display response
     print('\n{}'.format(response))
 
