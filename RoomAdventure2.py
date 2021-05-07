@@ -228,8 +228,11 @@ while victory == False:
 
         elif verb == 'use':
             response = 'You can\'t use that here'
-            #if noun = 'remains':
-                #if location =
+            if noun = 'remains':
+                if location == lockedStudy:
+                    score += 25
+                    inventory.remvItem('remains')
+                    response = 'You hurl the remains into the flames, destroying the spiritual essence they once held.'
 
     # Display response
     print('\n{}'.format(response))
