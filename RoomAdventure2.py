@@ -224,8 +224,6 @@ while victory == False:
 
                     # Let player know the item is retrieved.
                     response = 'You picked up {}'.format(items)
-                    break
-
         elif verb == 'use':
             response = 'You can\'t use that here'
             if noun = 'remains':
@@ -233,9 +231,12 @@ while victory == False:
                     score += 25
                     inventory.remvItem('remains')
                     response = 'You hurl the remains into the flames, destroying the spiritual essence they once held.'
-
-    # Display response
-    print('\n{}'.format(response))
+	    if noun = 'spectral_key':
+                if location == masterBedroom:
+   		    masterRoom.addExit('northern_door', lockedStudy)
+		    score += 25 
+	# Display response
+        print('\n{}'.format(response))
 
 
 
