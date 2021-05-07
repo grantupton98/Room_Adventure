@@ -152,12 +152,11 @@ inventory = []
 score = 0
 # Implement game responses to player
 # Run until the game is won or player quits
-victory = False
-while victory == False:
+
+while score < 100:
     player = 'You are in {}\nIn your bag, you have {}\nYour score is {}'.format(location, inventory, score)
 
-    if score == 100:
-        victory = True
+
 
     print(player)
 
