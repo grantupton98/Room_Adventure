@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Class for creating rooms
 class Room:
     def __init__(self, name):
@@ -226,12 +225,12 @@ while victory == False:
                     # Let player know the item is retrieved.
                     response = 'You picked up {}'.format(items)
                     break
-        
+
         elif verb == 'use':
             response = 'You can\'t use that here'
             if noun = 'remains':
-                if location = 
-            
+                if location =
+
     # Display response
     print('\n{}'.format(response))
 
@@ -485,4 +484,3 @@ while victory == False:
 #### When a player enters quit, save all relevant data to an outfile. When a player starts the
 #### game, before starting the menu, ask if they want to start a new game or load a save file.
 ####
->>>>>>> b2ab518d77511491f695bfc5114233f91909b292
