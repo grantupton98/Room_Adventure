@@ -139,7 +139,7 @@ def createRooms():
     lockedStudy.addExit('southern_door', masterRoom)
 
     # Locked study feeatures
-    lockedStudy.addFeature('hearth', 'Though this house has been long abandoned, the fire in the hearth still burns.')
+    lockedStudy.addFeature('hearth', 'Though this house has been long abandoned, the fire in the hearth still burns. Seems like a good place to throw some ghostly remains.')
 
     # Set the current room
     location = foyer
@@ -154,7 +154,7 @@ score = 0
 # Run until the game is won or player quits
 
 while score < 100:
-    player = 'You are in {}\nIn your bag, you have {}\nYour score is {}'.format(location, inventory, score)
+    player = 'You are in {}\nIn your bag, you have {}\nYour score is {}\n Verbs are USE, TAKE, GO, LOOK.'.format(location, inventory, score)
 
 
 
@@ -172,7 +172,7 @@ while score < 100:
         break
 
     # Set a default response to incorrect verbs
-    response = 'That is not a valid action.\nYour verbs are GO, LOOK, and TAKE.\nType your action in \"verb noun\" format.'
+    response = 'That is not a valid action.\nYour verbs are GO, LOOK, USE and TAKE.\nType your action in \"verb noun\" format.'
 
     # Split the player input into two words
     action = do.split()
