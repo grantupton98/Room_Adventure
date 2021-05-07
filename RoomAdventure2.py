@@ -166,8 +166,8 @@ while score < 100:
 
     # When a player quits, create a save file
     if do == 'quit':
-        savefile = open('Save_File', 'W')
-        savefile.writelines(inventory, '\n', location)
+        savefile = open('Save_File', 'w')
+        savefile.writelines(str(inventory) + '\n' + str(score))
         savefile.close()
         break
 
