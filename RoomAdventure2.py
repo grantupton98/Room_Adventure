@@ -56,7 +56,7 @@ def createRooms():
     library = Room('The Library. The books are in suprisingly good condition, given the multiple leaks in the roof here. You can almost read the spines!')
 
     # Second Floor
-    landing = Room('The Landing at the Top of the Stairs. The light mist seen from the bottom of the stairs suddenly seems must thicker, and you can almost see faces in it.')
+    landing = Room('The Landing at the Top of the Stairs. The light mist seen from the bottom of the stairs suddenly seems much thicker, and you can almost see faces in it.')
     armory = Room('The Armor Room. Dozens of suits of rusted-out armor line the long room to either side of the door, standing in front of a variety of completely ruined banners.')
     childRoom = Room('The Child\'s Bedroom. A crib with peeling white paint sits underneath a creaking, slowly spinning mobile. On the other side of the room is a cracked porcelain doll.')
     masterRoom = Room('The Master Bedroom. A four poster bed in the middle room is obscured by theadbare satin curtains. You think you can make out a man\s figure behind it.')
