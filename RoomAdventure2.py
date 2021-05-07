@@ -155,7 +155,7 @@ victory = False
 while victory == False:
     player = 'You are in {}\nIn your bag, you have {}\nYour score is {}'.format(location, inventory, score)
 
-    if location == None:
+    if score == 100:
         victory = True
 
     print(player)
@@ -224,6 +224,7 @@ while victory == False:
 
                     # Let player know the item is retrieved.
                     response = 'You picked up {}'.format(items)
+		    score += 25
         elif verb == 'use':
             response = 'You can\'t use that here'
             if noun = 'remains':
@@ -237,7 +238,7 @@ while victory == False:
 		    score += 25 
 	# Display response
         print('\n{}'.format(response))
-
+print('Yay! You won!')
 
 
 #### Game is implemented in basic form
