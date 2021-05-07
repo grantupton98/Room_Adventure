@@ -48,7 +48,8 @@ class Room:
 # remove any items in inventory from relevant rooms
 def createRooms():
     global location
-
+    global masterRoom
+    global lockedStudy
     # First Floor- Creates named rooms, which can have attributes added in later through functions
     # for easier visualization of the gamespace
     foyer = Room('The Foyer. The wood floors are cracked and pitted, and the broken windows show nothing but a thick, featureless fog.')
@@ -224,18 +225,20 @@ while victory == False:
 
                     # Let player know the item is retrieved.
                     response = 'You picked up {}'.format(items)
-		    score += 25
+                    score += 25
         elif verb == 'use':
             response = 'You can\'t use that here'
-            if noun = 'remains':
+            if noun == 'remains':
                 if location == lockedStudy:
                     score += 25
-                    inventory.remvItem('remains')
+                    inventory.remove('remains')
                     response = 'You hurl the remains into the flames, destroying the spiritual essence they once held.'
-	    if noun = 'spectral_key':
-                if location == masterBedroom:
-   		    masterRoom.addExit('northern_door', lockedStudy)
-		    score += 25 
+            if noun == 'spectral_key':
+                if location == masterRoom:
+                    masterRoom.addExit('northern_door', lockedStudy)
+                    score += 25
+                    response = 'You unlocked the door to the north.'
+                    inventory.remove('spectral_key')
 	# Display response
         print('\n{}'.format(response))
 print('Yay! You won!')
